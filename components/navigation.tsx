@@ -128,16 +128,16 @@ export function Navigation() {
                       onMouseEnter={handleDropdownMouseEnter}
                       onMouseLeave={handleDropdownMouseLeave}
                     >
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300"
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-                    </div>
+                    {item.dropdown.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.name}
+                        href={dropdownItem.href}
+                        className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300"
+                      >
+                        {dropdownItem.name}
+                      </Link>
+                    ))}
+                  </div>
                   </>
                 )}
               </div>
