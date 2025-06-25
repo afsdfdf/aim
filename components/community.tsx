@@ -25,9 +25,9 @@ export default function Community() {
               </p>
               <div className="flex gap-3 justify-center md:justify-start">
                 {[
-                  { icon: Twitter, href: "#" },
+                  { icon: Twitter, href: "https://twitter.com/aimint_token" },
                   { icon: Github, href: "#" },
-                  { icon: Send, href: "#" },
+                  { icon: Send, href: "https://t.me/AIMintCommunity" },
                   { icon: MessageCircle, href: "#" },
                 ].map((social, index) => (
                   <a
