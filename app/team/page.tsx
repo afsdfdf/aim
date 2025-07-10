@@ -8,7 +8,7 @@ import Image from "next/image"
 export default function TeamPage() {
   const teamMembers = [
     {
-      name: "Alex Chen",
+      name: "James Anderson",
       role: "Founder & CEO",
       bio: "Former Google DeepMind researcher, AI algorithm expert, blockchain technology evangelist",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
