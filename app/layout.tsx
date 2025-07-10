@@ -7,12 +7,12 @@ import { Navigation } from "@/components/navigation"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AIMint - Algorithm as Asset, Forging Future Creation",
+  title: "AIMINT - Algorithm as Asset, Forging Future Creation",
   description: "Transform AI-generated content into on-chain assets, building a decentralized computing market and model economy ecosystem. Join the Web3 AI revolution.",
   keywords: ["AI", "Web3", "NFT", "Blockchain", "Machine Learning", "DeFi", "Crypto", "Digital Assets", "Smart Contracts"],
-  authors: [{ name: "AIMint Team" }],
-  creator: "AIMint Foundation",
-  publisher: "AIMint Foundation",
+  authors: [{ name: "AIMINT Team" }],
+  creator: "AIMINT Foundation",
+  publisher: "AIMINT Foundation",
   formatDetection: {
     email: false,
     address: false,
@@ -23,22 +23,22 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "AIMint - Algorithm as Asset, Forging Future Creation",
-    description: "Transform AI-generated content into on-chain assets, building a decentralized computing market and model economy ecosystem.",
+    title: "AIMINT - Algorithm as Asset, Forging Future Creation",
+    description: "Transform AI-generated content into valuable digital assets through blockchain technology",
     url: 'https://aimint.io',
-    siteName: 'AIMint',
+    siteName: 'AIMINT',
     images: [
       {
         url: '/logo1.png',
         width: 1200,
         height: 630,
-        alt: 'AIMint - AI + Web3 Innovation',
+        alt: 'AIMINT - AI + Web3 Innovation',
       },
       {
         url: '/logo1.png',
         width: 800,
         height: 600,
-        alt: 'AIMint Logo',
+        alt: 'AIMINT Logo',
       },
     ],
     locale: 'en_US',
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AIMint - Algorithm as Asset',
-    description: 'Transform AI-generated content into valuable digital assets with blockchain technology.',
-    images: ['/logo1.png'],
-    creator: '@AIMintOfficial',
+    title: 'AIMINT - Algorithm as Asset, Forging Future Creation',
+    description: 'Transform AI-generated content into valuable digital assets through blockchain technology',
+    images: ['https://aimint.io/twitter-image.jpg'],
+    creator: '@AIMINTOfficial',
   },
   robots: {
     index: true,

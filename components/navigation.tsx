@@ -90,7 +90,7 @@ export function Navigation() {
             <div className="relative">
               <Image
                 src="/logoh.png"
-                alt="AIMint Logo"
+                alt="AIMINT Logo"
                 width={120}
                 height={40}
                 className="h-8 lg:h-10 w-auto group-hover:scale-110 transition-transform duration-300"

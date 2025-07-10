@@ -7,7 +7,7 @@ export default function DAOPage() {
   const features = [
     {
       title: "Community Governance",
-      description: "AIM token holders participate in major platform decisions",
+      description: "AIMINT token holders participate in major platform decisions",
       icon: Users,
     },
     {
@@ -30,9 +30,9 @@ export default function DAOPage() {
   const benefits = [
     {
       title: "Governance Tokens",
-      description: "Total AIM tokens participating in governance",
+      description: "Total AIMINT tokens participating in governance",
       value: "50M",
-      suffix: "AIM Tokens",
+      suffix: "AIMINT Tokens",
     },
     {
       title: "Active Voters",
@@ -147,7 +147,7 @@ export default function DAOPage() {
 
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                AIM token holders participate in platform governance together, determining platform development direction, resource allocation, and important decisions through transparent voting mechanisms, achieving true decentralized governance.
+                AIMINT token holders participate in platform governance together, determining platform development direction, resource allocation, and important decisions through transparent voting mechanisms, achieving true decentralized governance.
               </p>
 
               {/* CTA Buttons */}
@@ -233,7 +233,7 @@ export default function DAOPage() {
                   <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
                     <div className="text-sm text-gray-600 mb-2">Your Voting Power</div>
                     <div className="bg-white p-3 rounded-lg border border-gray-200 text-gray-800 shadow-sm">
-                      1,250 AIM Tokens (0.025% voting power)
+                      1,250 AIMINT Tokens (0.025% voting power)
                     </div>
                   </div>
 

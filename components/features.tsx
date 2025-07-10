@@ -56,7 +56,7 @@ export function Features() {
       subtitle: "Liquidity Mining",
       description: "NFT trading mining for continuous revenue",
       benefits: [
-        "Trade to mine, earn AIM tokens",
+        "Trade to mine, earn AIMINT tokens",
         "Continuous royalty income distribution",
         "Liquidity provider rewards",
         "Governance rights and voting power",

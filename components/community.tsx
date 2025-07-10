@@ -12,11 +12,11 @@ export default function Community() {
             <div className="md:col-span-2 text-center md:text-left">
               <div className="flex items-center mb-4 justify-center md:justify-start">
                 <Image
-                  src="/logoh.png"
-                  alt="AIMint Logo"
-                  width={120}
-                  height={40}
-                  className="h-8 w-auto"
+                  src="/logo1.png"
+                  width={80}
+                  height={80}
+                  alt="AIMINT Logo"
+                  className="mb-6"
                 />
               </div>
               <p className="text-gray-600 mb-6 max-w-md mx-auto md:mx-0">
@@ -25,9 +25,9 @@ export default function Community() {
               </p>
               <div className="flex gap-3 justify-center md:justify-start">
                 {[
-                  { icon: Twitter, href: "https://twitter.com/aimint_token" },
-                  { icon: Github, href: "#" },
-                  { icon: Send, href: "https://t.me/AIMintCommunity" },
+                  { icon: Twitter, href: "https://twitter.com/AIMINTOfficial" },
+                  { icon: Github, href: "https://github.com/AIMINT" },
+                  { icon: Send, href: "https://t.me/AIMINTCommunity" },
                   { icon: MessageCircle, href: "#" },
                 ].map((social, index) => (
                   <a
@@ -110,9 +110,9 @@ export default function Community() {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-6 pb-6">
+          <div className="mt-20 border-t border-gray-200 pt-10 pb-8">
             <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
-              <p className="text-gray-500 text-sm text-center">© 2025 AIMint. All rights reserved.</p>
+              <p className="text-gray-500 text-sm text-center">© 2025 AIMINT. All rights reserved.</p>
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm">
                 <a href="#" className="text-gray-500 hover:text-gray-700 transition-colors duration-300">
                   Privacy Policy

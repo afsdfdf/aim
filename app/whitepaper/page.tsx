@@ -36,11 +36,11 @@ import {
 
 export default function WhitepaperPage() {
   const tokenDistribution = [
-    { name: "Creator Incentive Pool", value: 60, color: "#06b6d4" },
-    { name: "Ecosystem Expansion Fund", value: 15, color: "#3b82f6" },
-    { name: "Core Team & Advisors", value: 10, color: "#8b5cf6" },
-    { name: "Strategic Investors", value: 10, color: "#f59e0b" },
-    { name: "Marketing & Liquidity", value: 5, color: "#10b981" },
+    { name: "Asset Onboarding and Liquidity Incentives", value: 50, color: "#06b6d4" },
+    { name: "Technical Development and Platform Operations", value: 15, color: "#3b82f6" },
+    { name: "Compliance and Governance Fund", value: 15, color: "#8b5cf6" },
+    { name: "Foundation Reserve", value: 10, color: "#f59e0b" },
+    { name: "Team and Advisors", value: 10, color: "#10b981" },
   ]
 
   const adoptionData = [
@@ -52,7 +52,7 @@ export default function WhitepaperPage() {
   ]
 
   const competitorData = [
-    { name: "AIMint", aiCapability: 95, web3Integration: 90, userExperience: 88, scalability: 92 },
+    { name: "AIMINT", aiCapability: 95, web3Integration: 90, userExperience: 88, scalability: 92 },
     { name: "OpenSea", aiCapability: 20, web3Integration: 85, userExperience: 80, scalability: 75 },
     { name: "MidJourney", aiCapability: 90, web3Integration: 10, userExperience: 85, scalability: 70 },
     { name: "SuperRare", aiCapability: 30, web3Integration: 80, userExperience: 75, scalability: 65 },
@@ -72,7 +72,7 @@ export default function WhitepaperPage() {
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                 <FileText className="w-5 h-5 text-white" />
               </div>
-            <span className="text-xl font-bold text-gray-900">AIMint Whitepaper</span>
+            <span className="text-xl font-bold text-gray-900">AIMINT Whitepaper</span>
             </div>
             <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-xl">
             Download PDF
@@ -89,12 +89,12 @@ export default function WhitepaperPage() {
             <span>Technical Whitepaper v2.0</span>
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AIMint</span>
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AIMINT</span>
             <br />
             <span className="text-3xl sm:text-4xl text-gray-700">Algorithm as Asset, Crafting Future Creation</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A decentralized creative ecosystem based on the deep integration of artificial intelligence and blockchain technology
+            A decentralized creative ecosystem based on the deep integration of artificial intelligence and blockchain technology with a total token supply of 100 billion AIMINT
           </p>
           <div className="flex items-center justify-center gap-8 mt-8 text-sm text-gray-500">
             <span>Release Date: January 2025</span>
@@ -156,7 +156,7 @@ export default function WhitepaperPage() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Project Overview</h3>
               <p className="text-gray-700 leading-relaxed">
-                AIMint is the world's first decentralized creative ecosystem that deeply integrates AI-generated content with blockchain technology. Through the revolutionary concept of "Algorithm as Asset", we tokenize AI models, creative processes, and generated content, building a complete creator economy loop.
+                AIMINT is the world's first decentralized creative ecosystem that deeply integrates AI-generated content with blockchain technology. Through the revolutionary concept of "Algorithm as Asset", we tokenize AI models, creative processes, and generated content, building a complete creator economy loop.
               </p>
             </div>
 
@@ -298,7 +298,7 @@ export default function WhitepaperPage() {
           <CardContent className="p-8 pt-0 space-y-8">
             <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-2xl border border-purple-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Layered Architecture Design</h3>
-              <p className="text-gray-700 mb-6">AIMint adopts a modular layered architecture to ensure system scalability, security, and high performance.</p>
+              <p className="text-gray-700 mb-6">AIMINT adopts a modular layered architecture to ensure system scalability, security, and high performance.</p>
             </div>
 
             <div className="space-y-6">
@@ -471,12 +471,141 @@ export default function WhitepaperPage() {
                 </div>
               </div>
             </div>
+            
+            {/* Release Mechanism */}
+            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-2xl border border-indigo-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <Lock className="w-5 h-5 text-indigo-600" />
+                Release Mechanism
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 border border-gray-100 rounded-xl mb-4">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 text-left text-sm font-semibold text-gray-700">
+                        Allocation Category
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        % of Total Supply
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        Amount of Token
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        Unlock % at TGE
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        Cliff Period
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        Vesting Period
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-center text-sm font-semibold text-gray-700">
+                        TGE % of Total
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#06b6d4" }} />
+                          <span className="font-medium text-gray-900">Asset Onboarding and Liquidity Incentives</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">50%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">50.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">33%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">0 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-indigo-600 font-bold">16.5%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#3b82f6" }} />
+                          <span className="font-medium text-gray-900">Technical Development and Platform Operations</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">15%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">15.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-indigo-600 font-bold">3.0%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#8b5cf6" }} />
+                          <span className="font-medium text-gray-900">Compliance and Governance Fund</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">15%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">15.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-indigo-600 font-bold">3.0%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#f59e0b" }} />
+                          <span className="font-medium text-gray-900">Foundation Reserve</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">10%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">10.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">0 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">18 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-indigo-600 font-bold">2.0%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#10b981" }} />
+                          <span className="font-medium text-gray-900">Team and Advisors</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">10%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">10.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">10%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">36 months</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-indigo-600 font-bold">1.0%</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-4 py-3 whitespace-nowrap font-bold text-gray-900">Total</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-gray-900">100%</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-gray-900">100.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-indigo-600">25.5%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 text-sm text-gray-700">
+                <p className="mb-2">
+                  <strong>Total Token Supply: 100,000,000,000 (100B) AIMINT Tokens</strong>
+                </p>
+                <p className="mb-2">
+                  <strong>Initial Circulating Supply: 25,500,000,000 (25.5B) AIMINT Tokens</strong> - 25.5% of total supply unlocked at Token Generation Event (TGE)
+                </p>
+                <p>
+                  The token release schedule is designed to ensure long-term project sustainability and ecosystem growth while providing sufficient liquidity for market operations.
+                </p>
+              </div>
+            </div>
 
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Inflation and Deflation Mechanisms</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 text-green-700">Deflationary Mechanisms</h4>
+                  <h4 className="font-semibold mb-3 text-green-700">Deflationary Mechanisms</h4>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -493,7 +622,7 @@ export default function WhitepaperPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 text-blue-700">Issuance Mechanisms</h4>
+                  <h4 className="font-semibold mb-3 text-blue-700">Issuance Mechanisms</h4>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -505,7 +634,7 @@ export default function WhitepaperPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                      <span>Ecosystem development: Annual issuance rate not exceeding 3% for ecosystem building</span>
+                      <span>Ecosystem development: Annual issuance rate not exceeding 2% for ecosystem building</span>
                     </li>
                   </ul>
                 </div>
@@ -717,7 +846,7 @@ export default function WhitepaperPage() {
           <CardContent className="p-8 lg:p-12 text-center">
             <h2 className="text-3xl font-bold mb-6">Conclusion</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              AIMint is committed to building the world's largest AI+Web3 creative ecosystem. Through technological innovation and economic incentives, 
+              AIMINT is committed to building the world's largest AI+Web3 creative ecosystem. Through technological innovation and economic incentives, 
               we enable every creator to receive the value they deserve in the digital age. We believe that the concept of "Algorithm as Asset" 
               will redefine the value of creation and forge a bright future for digital creativity.
             </p>
@@ -737,7 +866,7 @@ export default function WhitepaperPage() {
 
         {/* Footer */}
         <div className="text-center text-gray-500 text-sm">
-          <p>© 2025 AIMint Foundation. This whitepaper is for informational purposes only and does not constitute investment advice.</p>
+          <p>© 2025 AIMINT Foundation. This whitepaper is for informational purposes only and does not constitute investment advice.</p>
           <p className="mt-2">Last Updated: January 2025 | Version: 2.0 | Language: English</p>
         </div>
       </div>

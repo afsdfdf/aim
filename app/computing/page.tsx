@@ -136,10 +136,10 @@ export default function ComputingPage() {
                 <div className="absolute top-4 right-4 z-10">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Logo"
                     width={40}
                     height={40}
-                    className="w-8 h-8 opacity-30 hover:opacity-50 transition-opacity duration-300"
+                    alt="AIMINT Logo"
+                    className="mr-3"
                   />
                 </div>
                 

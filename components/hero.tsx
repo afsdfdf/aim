@@ -52,7 +52,7 @@ export function Hero() {
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
-                <span className="block">AIMint</span>
+                <span className="block">AIMINT</span>
                 <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   Algorithm as Asset
                 </span>
@@ -120,7 +120,7 @@ export function Hero() {
               <div className="absolute top-4 right-4 z-10">
                 <Image
                   src="/logo1.png"
-                  alt="AIMint Transparent Logo"
+                  alt="AIMINT Transparent Logo"
                   width={40}
                   height={40}
                   className="w-8 h-8 opacity-30 hover:opacity-50 transition-opacity duration-300"
@@ -194,7 +194,7 @@ export function Hero() {
               <div className="absolute top-2 right-2">
                 <Image
                   src="/logo1.png"
-                  alt="AIMint Transparent Logo"
+                  alt="AIMINT Transparent Logo"
                   width={24}
                   height={24}
                   className="w-4 h-4 opacity-20"
@@ -219,7 +219,7 @@ export function Hero() {
               <div className="absolute top-2 right-2">
                 <Image
                   src="/logo1.png"
-                  alt="AIMint Transparent Logo"
+                  alt="AIMINT Transparent Logo"
                   width={24}
                   height={24}
                   className="w-4 h-4 opacity-20"

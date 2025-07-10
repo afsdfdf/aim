@@ -3,59 +3,59 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts"
-import { Coins, Users, Zap, Shield, Award, TrendingUp } from "lucide-react"
+import { Coins, Users, Zap, Shield, Award, TrendingUp, Table } from "lucide-react"
 
 export function Tokenomics() {
   const tokenData = [
     {
-      name: "Creator Incentive Pool",
-      value: 60,
-      amount: 6000000000,
+      name: "Asset Onboarding and Liquidity Incentives",
+      value: 50,
+      amount: 50000000000,
       color: "#06b6d4",
-      tge: "20%",
+      tge: "33%",
       cliff: "0 months",
       vesting: "24 months",
-      note: "Rewards for quality prompts and data contributions",
+      note: "For incentivizing quality assets and providing liquidity incentives",
     },
     {
-      name: "Ecosystem Development Fund",
+      name: "Technical Development and Platform Operations",
       value: 15,
-      amount: 1500000000,
+      amount: 15000000000,
       color: "#3b82f6",
       tge: "20%",
-      cliff: "6 months",
+      cliff: "12 months",
       vesting: "24 months",
-      note: "Market development, partnerships, ecosystem support",
+      note: "Technical development, platform operations and maintenance",
     },
     {
-      name: "Core Team & Advisors",
-      value: 10,
-      amount: 1000000000,
+      name: "Compliance and Governance Fund",
+      value: 15,
+      amount: 15000000000,
       color: "#8b5cf6",
-      tge: "25%",
-      cliff: "3 months",
-      vesting: "18 months",
-      note: "Gradual release after lock-up period, ensuring long-term commitment",
-    },
-    {
-      name: "Strategic Investors",
-      value: 10,
-      amount: 1000000000,
-      color: "#f59e0b",
       tge: "20%",
       cliff: "12 months",
-      vesting: "36 months",
-      note: "Long-term lock-up, strategic partnership guarantee",
+      vesting: "24 months",
+      note: "Ensuring regulatory compliance and governance",
     },
     {
-      name: "Market & Liquidity",
-      value: 5,
-      amount: 500000000,
+      name: "Foundation Reserve",
+      value: 10,
+      amount: 10000000000,
+      color: "#f59e0b",
+      tge: "20%",
+      cliff: "0 months",
+      vesting: "18 months",
+      note: "Reserve funds for future ecosystem development",
+    },
+    {
+      name: "Team and Advisors",
+      value: 10,
+      amount: 10000000000,
       color: "#10b981",
       tge: "10%",
-      cliff: "0 months",
-      vesting: "12 months",
-      note: "Liquidity mining pools, airdrops and community incentives",
+      cliff: "12 months",
+      vesting: "36 months",
+      note: "Team incentives and advisor rewards",
     },
   ]
 
@@ -69,37 +69,12 @@ export function Tokenomics() {
             <span className="text-xs sm:text-sm">Tokenomics</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AIM Token</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AIMINT Token</span>{" "}
             Economic Model
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
-            Total supply of 10 billion tokens, building a sustainable token economy ecosystem through scientific release mechanisms and multiple utilities
+            Building a sustainable token economy ecosystem through scientific release mechanisms and multiple utilities
           </p>
-        </div>
-
-        {/* Key Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
-          {[
-                    { label: "Total Supply", value: "10B AIM", icon: Coins, gradient: "from-cyan-500 to-blue-500" },
-        { label: "Current Price", value: "$0.078", icon: TrendingUp, gradient: "from-emerald-500 to-green-500" },
-        { label: "Market Cap", value: "$780M", icon: Award, gradient: "from-purple-500 to-indigo-500" },
-        { label: "Holders", value: "125K+", icon: Users, gradient: "from-orange-500 to-amber-500" },
-          ].map((metric, index) => (
-            <Card
-              key={index}
-              className="bg-slate-800/50 border border-slate-700/50 hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-            >
-              <CardContent className="p-4 sm:p-6 text-center">
-                <div
-                  className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl flex items-center justify-center bg-gradient-to-br ${metric.gradient} shadow-lg`}
-                >
-                  <metric.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">{metric.value}</div>
-                <div className="text-xs sm:text-sm text-slate-400">{metric.label}</div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Token Distribution */}
@@ -202,11 +177,105 @@ export function Tokenomics() {
           </Card>
         </div>
 
+        {/* TGE Table */}
+        <Card className="bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm mb-10 sm:mb-12">
+          <CardHeader className="p-6 sm:p-8">
+            <CardTitle className="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
+              <Table className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-400" />
+              TGE Allocation Details
+            </CardTitle>
+            <CardDescription className="text-slate-400">Comprehensive breakdown of token allocation at Token Generation Event</CardDescription>
+          </CardHeader>
+          <CardContent className="p-6 sm:p-8 pt-0 overflow-x-auto">
+            <div className="min-w-full">
+              <table className="min-w-full divide-y divide-slate-700 border border-slate-700 rounded-xl overflow-hidden">
+                <thead className="bg-slate-700/50">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 text-left text-xs sm:text-sm font-semibold text-slate-300">
+                      Allocation Category
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      % of Total Supply
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      Amount of Token
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      Unlock % at TGE
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      Cliff Period (months)
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      Vesting Period (months)
+                    </th>
+                    <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-semibold text-slate-300">
+                      TGE % of Total Supply
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-slate-800/30 divide-y divide-slate-700">
+                  {tokenData.map((item, index) => {
+                    // Calculate TGE % of Total Supply
+                    const unlockPercentage = parseFloat(item.tge.replace("%", "")) / 100;
+                    const tgePercentOfTotal = (item.value * unlockPercentage).toFixed(2);
+                    
+                    return (
+                      <tr key={index} className="hover:bg-slate-700/30">
+                        <td className="px-4 py-3 whitespace-nowrap">
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full" style={{ backgroundColor: item.color }} />
+                            <span className="font-medium text-white text-xs sm:text-sm">{item.name}</span>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-white font-semibold">
+                          {item.value}%
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-slate-300">
+                          {(item.amount / 1000000000).toFixed(1)}B
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-cyan-400 font-medium">
+                          {item.tge}
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-blue-400 font-medium">
+                          {item.cliff}
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-purple-400 font-medium">
+                          {item.vesting}
+                        </td>
+                        <td className="px-4 py-3 whitespace-nowrap text-center text-xs sm:text-sm text-indigo-400 font-bold">
+                          {tgePercentOfTotal}%
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  <tr className="bg-slate-700/50">
+                    <td className="px-4 py-3 whitespace-nowrap font-bold text-white text-xs sm:text-sm">Total</td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-white text-xs sm:text-sm">100%</td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-white text-xs sm:text-sm">100.0B</td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center"></td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-indigo-400 text-xs sm:text-sm">
+                      {tokenData
+                        .reduce((total, item) => {
+                          const unlockPercentage = parseFloat(item.tge.replace("%", "")) / 100;
+                          return total + item.value * unlockPercentage;
+                        }, 0)
+                        .toFixed(2)}%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Utility & Use Cases */}
         <div className="bg-slate-800/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-slate-700/50 backdrop-blur-sm">
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Token Utility</h3>
-            <p className="text-base sm:text-lg text-slate-400">Multiple application scenarios of AIM tokens in the ecosystem</p>
+            <p className="text-base sm:text-lg text-slate-400">Multiple application scenarios of AIMINT tokens in the ecosystem</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -214,7 +283,7 @@ export function Tokenomics() {
               {
                 icon: Zap,
                 title: "Computing Payment",
-                description: "Use AIM tokens to pay for AI computing resources with discount benefits",
+                description: "Use AIMINT tokens to pay for AI computing resources with discount benefits",
                 gradient: "from-cyan-500 to-blue-500",
               },
               {
@@ -232,7 +301,7 @@ export function Tokenomics() {
               {
                 icon: Award,
                 title: "Creator Incentives",
-                description: "Quality content creators receive AIM token rewards",
+                description: "Quality content creators receive AIMINT token rewards",
                 gradient: "from-orange-500 to-amber-500",
               },
               {
@@ -264,16 +333,16 @@ export function Tokenomics() {
         {/* CTA */}
         <div className="text-center mt-10 sm:mt-12">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-2xl">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ready to Join the AIM Ecosystem?</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ready to Join the AIMINT Ecosystem?</h3>
             <p className="text-cyan-100 mb-4 sm:mb-6 max-w-2xl mx-auto">
-              Get AIM tokens now, participate in ecosystem building, and enjoy development dividends
+              Get AIMINT tokens now, participate in ecosystem building, and enjoy development dividends
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-cyan-600 hover:bg-slate-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                Buy AIM Tokens
+                Buy AIMINT Tokens
               </Button>
               <Button
                 variant="outline"

@@ -4,79 +4,99 @@ import { Linkedin, Twitter, Github, Award, Users, Briefcase, Star, Building } fr
 export function Team() {
   const teamMembers = [
     {
-      name: "Alex Chen",
-      role: "创始人 & CEO",
-      bio: "前Google DeepMind研究员，AI算法专家，区块链技术布道者",
-      avatar: "AC",
-      experience: "10年AI研发经验",
-      achievements: ["AI顶会论文20+", "Google AI奖获得者", "区块链专利5项"],
+      name: "John Smith",
+      role: "Founder & CEO",
+      bio: "Former Google DeepMind researcher, AI algorithm expert, blockchain technology evangelist",
+      avatar: "JS",
+      experience: "10 years in AI research",
+      achievements: ["20+ AI conference papers", "Google AI award winner", "5 blockchain patents"],
       social: { twitter: "#", linkedin: "#", github: "#" },
       gradient: "from-cyan-500 to-blue-500",
     },
     {
-      name: "Sarah Kim",
-      role: "首席技术官",
-      bio: "前以太坊核心开发者，智能合约安全专家，Web3基础设施架构师",
-      avatar: "SK",
-      experience: "8年区块链开发",
-      achievements: ["以太坊贡献者", "DeFi协议架构师", "安全审计专家"],
+      name: "Michael Reynolds",
+      role: "Chief Technology Officer",
+      bio: "Former Ethereum core developer, smart contract security expert, Web3 infrastructure architect",
+      avatar: "MR",
+      experience: "8 years in blockchain development",
+      achievements: ["Ethereum contributor", "DeFi protocol architect", "Security audit specialist"],
       social: { twitter: "#", linkedin: "#", github: "#" },
       gradient: "from-purple-500 to-indigo-500",
     },
     {
-      name: "David Wang",
-      role: "首席产品官",
-      bio: "前Meta产品总监，NFT市场资深从业者，用户体验设计专家",
-      avatar: "DW",
-      experience: "12年产品管理",
-      achievements: ["Meta产品奖", "NFT市场先驱", "UX设计大师"],
+      name: "Sarah Thompson",
+      role: "Chief Product Officer",
+      bio: "Former Meta product director, experienced in NFT markets, user experience design expert",
+      avatar: "ST",
+      experience: "12 years in product management",
+      achievements: ["Meta product award", "NFT market pioneer", "UX design master"],
       social: { twitter: "#", linkedin: "#" },
       gradient: "from-emerald-500 to-green-500",
     },
     {
-      name: "Lisa Zhang",
-      role: "首席运营官",
-      bio: "前币安全球运营总监，加密货币市场专家，社区建设领导者",
-      avatar: "LZ",
-      experience: "9年运营管理",
-      achievements: ["币安金牌员工", "社区建设专家", "市场营销大师"],
+      name: "Robert Chen",
+      role: "Chief AI Scientist",
+      bio: "Ph.D. in Computer Science from Stanford, specializing in generative models and deep learning",
+      avatar: "RC",
+      experience: "15 years in AI research",
+      achievements: ["Stanford AI Lab", "Neural network innovations", "30+ research papers"],
+      social: { twitter: "#", linkedin: "#", github: "#" },
+      gradient: "from-blue-500 to-indigo-500",
+    },
+    {
+      name: "Mark Johnson",
+      role: "Chief Operating Officer",
+      bio: "Former Binance global operations director, cryptocurrency market expert, community building leader",
+      avatar: "MJ",
+      experience: "9 years in operations management",
+      achievements: ["Binance gold employee", "Community building expert", "Marketing specialist"],
       social: { twitter: "#", linkedin: "#" },
       gradient: "from-orange-500 to-amber-500",
+    },
+    {
+      name: "Emily Wilson",
+      role: "Marketing Director",
+      bio: "Digital marketing expert with experience in crypto and Web3 projects",
+      avatar: "EW",
+      experience: "8 years in digital marketing",
+      achievements: ["Web3 campaign specialist", "Growth hacker", "Community manager"],
+      social: { twitter: "#", linkedin: "#", github: "#" },
+      gradient: "from-pink-500 to-rose-500",
     },
   ]
 
   const advisors = [
     {
       name: "Dr. Michael Johnson",
-      role: "AI技术顾问",
-      company: "斯坦福大学AI实验室",
-      position: "主任",
-      expertise: "机器学习、深度学习",
+      role: "AI Technology Advisor",
+      company: "Stanford University AI Lab",
+      position: "Director",
+      expertise: "Machine Learning, Deep Learning",
       avatar: "MJ",
     },
     {
-      name: "Jennifer Liu",
-      role: "区块链顾问",
+      name: "Thomas Wilson",
+      role: "Blockchain Advisor",
       company: "Andreessen Horowitz",
-      position: "合伙人",
-      expertise: "Web3投资、DeFi协议",
-      avatar: "JL",
+      position: "Partner",
+      expertise: "Web3 Investment, DeFi Protocols",
+      avatar: "TW",
     },
     {
       name: "Robert Smith",
-      role: "市场顾问",
-      company: "前OpenSea",
-      position: "商务副总裁",
-      expertise: "NFT市场、数字资产",
+      role: "Market Advisor",
+      company: "Former OpenSea",
+      position: "VP of Business",
+      expertise: "NFT Market, Digital Assets",
       avatar: "RS",
     },
   ]
 
   const partners = [
-    { name: "OpenAI", logo: "OAI", type: "AI技术合作", description: "AI模型技术支持" },
-    { name: "Chainlink", logo: "CL", type: "预言机服务", description: "链上数据服务" },
-    { name: "Polygon", logo: "PG", type: "基础设施", description: "Layer2扩容方案" },
-    { name: "IPFS", logo: "IPFS", type: "存储协议", description: "去中心化存储" },
+    { name: "OpenAI", logo: "OAI", type: "AI Technology Collaboration", description: "AI Model Support" },
+    { name: "Chainlink", logo: "CL", type: "Oracle Services", description: "On-chain Data Services" },
+    { name: "Polygon", logo: "PG", type: "Infrastructure", description: "Layer 2 Scaling Solution" },
+    { name: "IPFS", logo: "IPFS", type: "Storage Protocol", description: "Decentralized Storage" },
   ]
 
   return (
@@ -86,16 +106,16 @@ export function Team() {
         <div className="text-center mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200 font-medium mb-4 sm:mb-6 shadow-lg backdrop-blur-sm">
             <Users className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="text-xs sm:text-sm">团队介绍</span>
+            <span className="text-xs sm:text-sm">Team</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              世界级团队
+              World-Class Team
             </span>{" "}
-            汇聚一堂
+            Working Together
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
-            来自全球顶级科技公司的AI与区块链专家，拥有丰富的行业经验和成功案例
+            AI and blockchain experts from top global tech companies, with extensive industry experience and success stories
           </p>
         </div>
 
@@ -103,7 +123,7 @@ export function Team() {
         <div className="mb-12 sm:mb-16">
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12 flex items-center justify-center gap-3">
             <Star className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400" />
-            核心团队
+            Core Team
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {teamMembers.map((member, index) => (

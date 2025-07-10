@@ -7,14 +7,14 @@ export default function DeveloperDocsPage() {
   const gettingStarted = [
     {
       title: "Quick Start",
-      description: "Get up and running with AIMint in 5 minutes",
+      description: "Get up and running with AIMINT in 5 minutes",
       icon: Zap,
       time: "5 min",
       link: "#quick-start"
     },
     {
       title: "SDK Installation", 
-      description: "Install AIMint SDK for your preferred language",
+      description: "Install AIMINT SDK for your preferred language",
       icon: Download,
       time: "2 min",
       link: "#sdk-installation"
@@ -78,55 +78,67 @@ export default function DeveloperDocsPage() {
     {
       title: "JavaScript/TypeScript",
       language: "javascript",
-      code: `import { AIMintSDK } from '@aimint/sdk';
+      code: `import { AIMINTSDK } from '@aimint/sdk';
 
-const aimint = new AIMintSDK({
-  apiKey: 'your-api-key',
+// Initialize the SDK with your API key
+const aimint = new AIMINTSDK({
+  apiKey: 'YOUR_API_KEY',
   environment: 'production'
 });
 
-// Generate AI artwork
-const artwork = await aimint.ai.generateImage({
-  prompt: 'A cyberpunk cat in space',
-  style: 'digital-art',
-  resolution: '1024x1024'
+// Generate an image
+const image = await aimint.generate({
+  prompt: 'A futuristic city with flying cars and neon lights',
+  model: 'stable-diffusion-xl',
+  enhancePrompt: true,
+  width: 1024,
+  height: 1024
 });
 
-// Mint as NFT
-const nft = await aimint.nft.mint({
-  imageUrl: artwork.url,
-  metadata: {
-    name: 'Cyberpunk Cat',
-    description: 'AI-generated artwork'
-  }
-});`
+// Mint the generated image
+const txHash = await aimint.mint({
+  image: image.url,
+  name: 'Future City',
+  description: 'A futuristic cityscape with neon lights',
+  royaltyBps: 500 // 5% royalties
+});
+
+console.log(\`Minted successfully: \${txHash}\`);`
     },
     {
       title: "Python",
       language: "python", 
-      code: `from aimint import AIMintSDK
+      code: `from aimint import AIMINTSDK
+import asyncio
 
-# Initialize SDK
-aimint = AIMintSDK(
-    api_key="your-api-key",
+# Initialize the SDK with your API key
+aimint = AIMINTSDK(
+    api_key="YOUR_API_KEY",
     environment="production"
 )
 
-# Generate AI artwork
-artwork = aimint.ai.generate_image(
-    prompt="A cyberpunk cat in space",
-    style="digital-art", 
-    resolution="1024x1024"
-)
+async def generate_and_mint():
+    # Generate an image
+    image = await aimint.generate(
+        prompt="A futuristic city with flying cars and neon lights",
+        model="stable-diffusion-xl",
+        enhance_prompt=True,
+        width=1024,
+        height=1024
+    )
+    
+    # Mint the generated image
+    tx_hash = await aimint.mint(
+        image=image.url,
+        name="Future City",
+        description="A futuristic cityscape with neon lights",
+        royalty_bps=500  # 5% royalties
+    )
+    
+    print(f"Minted successfully: {tx_hash}")
 
-# Mint as NFT
-nft = aimint.nft.mint(
-    image_url=artwork.url,
-    metadata={
-        "name": "Cyberpunk Cat",
-        "description": "AI-generated artwork"
-    }
-)`
+# Run the async function
+asyncio.run(generate_and_mint())`
     },
     {
       title: "cURL",
@@ -200,7 +212,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
 
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                Complete documentation, SDKs, and examples to help you integrate AIMint's AI generation, computing network, and blockchain features into your applications.
+                Complete documentation, SDKs, and examples to help you integrate AIMINT's AI generation, computing network, and blockchain features into your applications.
               </p>
 
               {/* CTA Buttons */}
@@ -246,7 +258,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
                 <div className="absolute top-4 right-4 z-10">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Logo"
+                    alt="AIMINT Logo"
                     width={40}
                     height={40}
                     className="w-8 h-8 opacity-30 hover:opacity-50 transition-opacity duration-300"
@@ -259,7 +271,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
                     <Terminal className="w-8 h-8 text-blue-400" />
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-white">AIMint SDK</span>
+                        <span className="font-semibold text-white">AIMINT SDK</span>
                       </div>
                       <div className="text-sm text-gray-400">Interactive Code Example</div>
                     </div>
@@ -275,16 +287,16 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
                 <div className="space-y-4">
                   <div className="text-green-400 text-sm">// Quick Start Example</div>
                   <div className="font-mono text-sm space-y-2">
-                    <div><span className="text-purple-400">import</span> <span className="text-yellow-300">&#123; AIMintSDK &#125;</span> <span className="text-purple-400">from</span> <span className="text-green-300">'@aimint/sdk'</span></div>
+                    <div><span className="text-purple-400">import</span> <span className="text-yellow-300">&#123; AIMINTSDK &#125;</span> <span className="text-purple-400">from</span> <span className="text-green-300">'@aimint/sdk'</span></div>
                     <div className="text-gray-400">// Initialize SDK</div>
-                    <div><span className="text-blue-400">const</span> <span className="text-white">aimint</span> = <span className="text-purple-400">new</span> <span className="text-yellow-300">AIMintSDK</span>&#40;&#123;</div>
+                    <div><span className="text-blue-400">const</span> <span className="text-white">aimint</span> = <span className="text-purple-400">new</span> <span className="text-yellow-300">AIMINTSDK</span>&#40;&#123;</div>
                     <div className="ml-4"><span className="text-red-400">apiKey</span>: <span className="text-green-300">'your-api-key'</span>,</div>
                     <div className="ml-4"><span className="text-red-400">environment</span>: <span className="text-green-300">'production'</span></div>
                     <div>&#125;&#41;</div>
                     <div className="text-gray-400 mt-4">// Generate AI artwork</div>
-                    <div><span className="text-blue-400">const</span> <span className="text-white">artwork</span> = <span className="text-purple-400">await</span> <span className="text-white">aimint</span>.<span className="text-yellow-300">ai</span>.<span className="text-blue-300">generateImage</span>&#40;&#123;</div>
+                    <div><span className="text-blue-400">const</span> <span className="text-white">artwork</span> = <span className="text-purple-400">await</span> <span className="text-white">aimint</span>.<span className="text-yellow-300">generate</span>&#40;&#123;</div>
                     <div className="ml-4"><span className="text-red-400">prompt</span>: <span className="text-green-300">'A cyberpunk cat'</span>,</div>
-                    <div className="ml-4"><span className="text-red-400">style</span>: <span className="text-green-300">'digital-art'</span></div>
+                    <div className="ml-4"><span className="text-red-400">model</span>: <span className="text-green-300">'stable-diffusion-xl'</span></div>
                     <div>&#125;&#41;</div>
                   </div>
 
@@ -312,7 +324,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Follow our step-by-step guide to integrate AIMint into your application
+              Follow our step-by-step guide to integrate AIMINT into your application
             </p>
           </div>
 
@@ -353,7 +365,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive guides for all AIMint platform features and integrations
+              Comprehensive guides for all AIMINT platform features and integrations
             </p>
           </div>
 
@@ -410,7 +422,7 @@ curl -X POST "https://api.aimint.ai/v1/nft/mint" \\
                 <CardHeader className="flex flex-row items-center justify-between p-6 border-b border-gray-700">
                   <div>
                     <CardTitle className="text-white">{example.title}</CardTitle>
-                    <CardDescription className="text-gray-400">AIMint SDK Example</CardDescription>
+                    <CardDescription className="text-gray-400">AIMINT SDK Example</CardDescription>
                   </div>
                   <Button 
                     variant="outline" 

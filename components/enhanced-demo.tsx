@@ -152,8 +152,8 @@ export function EnhancedDemo() {
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Experience{" "}
-            <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">AIMint</span>{" "}
-            Live
+            <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">AIMINT</span>{" "}
+            in Action
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Try our AI-powered creation tools and see how your ideas transform into valuable digital assets in real-time
@@ -236,7 +236,7 @@ export function EnhancedDemo() {
                 <div className="absolute top-4 right-4 z-10">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Transparent Logo"
+                    alt="AIMINT Transparent Logo"
                     width={40}
                     height={40}
                     className="w-8 h-8 opacity-30 hover:opacity-50 transition-opacity duration-300"
@@ -403,7 +403,7 @@ export function EnhancedDemo() {
                 <div className="absolute top-2 right-2">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Transparent Logo"
+                    alt="AIMINT Transparent Logo"
                     width={24}
                     height={24}
                     className="w-4 h-4 opacity-20"
@@ -426,7 +426,7 @@ export function EnhancedDemo() {
                 <div className="absolute top-2 right-2">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Transparent Logo"
+                    alt="AIMINT Transparent Logo"
                     width={24}
                     height={24}
                     className="w-4 h-4 opacity-20"

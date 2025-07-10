@@ -26,7 +26,7 @@ export default function TeamPage() {
       social: { twitter: "#", linkedin: "#", github: "#" },
     },
     {
-      name: "David Wang",
+      name: "Michael Reynolds",
       role: "Chief Product Officer",
       bio: "Former Meta product director, senior NFT marketplace practitioner, user experience design expert",
       avatar: "https://randomuser.me/api/portraits/men/46.jpg",
@@ -35,7 +35,7 @@ export default function TeamPage() {
       social: { twitter: "#", linkedin: "#" },
     },
     {
-      name: "Lisa Zhang",
+      name: "Sarah Thompson",
       role: "Chief Operating Officer",
       bio: "Former Binance global operations director, cryptocurrency market expert, community building leader",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
@@ -55,7 +55,7 @@ export default function TeamPage() {
       avatar: "https://randomuser.me/api/portraits/men/57.jpg",
     },
     {
-      name: "Jennifer Liu",
+      name: "Emily Wilson",
       role: "Blockchain Advisor",
       company: "Andreessen Horowitz",
       position: "Partner",
@@ -139,7 +139,7 @@ export default function TeamPage() {
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
                 <Users className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">AIMint Team</span>
+              <span className="text-xl font-bold text-gray-900">AIMINT Team</span>
             </div>
           </div>
         </div>

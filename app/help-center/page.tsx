@@ -7,7 +7,7 @@ export default function HelpCenterPage() {
   const helpCategories = [
     {
       title: "Getting Started",
-      description: "Learn the basics of using AIMint platform",
+      description: "Learn the basics of using AIMINT platform",
       icon: "🚀",
       articles: 15,
       topics: [
@@ -92,7 +92,7 @@ export default function HelpCenterPage() {
       category: "API Documentation", 
       readTime: "8 min",
       views: "9.2K",
-      description: "Step-by-step tutorial for integrating AIMint APIs into your application"
+      description: "Step-by-step tutorial for integrating AIMINT APIs into your application"
     },
     {
       title: "Understanding Gas Fees and Blockchain Costs",
@@ -171,7 +171,7 @@ export default function HelpCenterPage() {
 
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                Comprehensive help resources, tutorials, and 24/7 support to help you succeed with the AIMint platform. From getting started to advanced integrations.
+                Comprehensive help resources, tutorials, and 24/7 support to help you succeed with the AIMINT platform. From getting started to advanced integrations.
               </p>
 
               {/* Search Bar */}
@@ -210,7 +210,7 @@ export default function HelpCenterPage() {
                 <div className="absolute top-4 right-4 z-10">
                   <Image
                     src="/logo1.png"
-                    alt="AIMint Logo"
+                    alt="AIMINT Logo"
                     width={40}
                     height={40}
                     className="w-8 h-8 opacity-30 hover:opacity-50 transition-opacity duration-300"
