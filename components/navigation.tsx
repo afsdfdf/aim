@@ -56,7 +56,6 @@ export function Navigation() {
       name: "Products",
       href: "#features",
       dropdown: [
-        { name: "AI Minting", href: "/ai-minting" },
         { name: "Computing Market", href: "/computing" },
         { name: "Model Protocol", href: "/protocol" },
         { name: "DAO Governance", href: "/dao" },
@@ -71,7 +70,6 @@ export function Navigation() {
       dropdown: [
         { name: "Whitepaper", href: "/whitepaper" },
         { name: "Developer Docs", href: "/developer-docs" },
-        { name: "API Reference", href: "/api-reference" },
         { name: "Help Center", href: "/help-center" },
       ],
     },

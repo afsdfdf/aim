@@ -29,22 +29,22 @@ export default function DAOPage() {
 
   const benefits = [
     {
-      title: "Governance Tokens",
-      description: "Total AIMINT tokens participating in governance",
-      value: "50M",
-      suffix: "AIMINT Tokens",
+      title: "Governance Vision",
+      description: "Building transparent community governance mechanisms",
+      value: "Democratic",
+      suffix: "Governance",
     },
     {
-      title: "Active Voters",
-      description: "Number of users participating in governance voting",
-      value: "12,000+",
-      suffix: "Voters",
+      title: "Community Participation",
+      description: "Encouraging active community involvement",
+      value: "Inclusive",
+      suffix: "Community",
     },
     {
-      title: "Proposal Success",
-      description: "Community proposal approval and execution rate",
-      value: "85%",
-      suffix: "Pass Rate",
+      title: "Proposal Quality",
+      description: "Fostering high-quality community proposals",
+      value: "Thoughtful",
+      suffix: "Process",
     },
   ]
 

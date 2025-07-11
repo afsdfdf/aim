@@ -37,12 +37,12 @@ export function InteractiveStats() {
     if (!isVisible) return
 
     const targets = {
-      users: 500000,
-      models: 1000,
-      nfts: 2000000,
-      volume: 50000000,
-      nodes: 10000,
-      transactions: 5000000,
+      users: 0,
+      models: 0,
+      nfts: 0,
+      volume: 0,
+      nodes: 0,
+      transactions: 0,
     }
 
     const duration = 2000
@@ -70,54 +70,54 @@ export function InteractiveStats() {
   const stats = [
     {
       icon: Users,
-      label: "Global Users",
-      value: counters.users.toLocaleString() + "+",
-      change: "+12.5%",
+      label: "Platform Vision",
+      value: "Innovative",
+      change: "Building",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
       borderColor: "border-blue-200/50",
     },
     {
       icon: Zap,
-      label: "AI Models",
-      value: counters.models.toLocaleString() + "+",
-      change: "+8.3%",
+      label: "AI Technology",
+      value: "Advanced",
+      change: "Developing",
       color: "from-purple-500 to-indigo-500",
       bgColor: "bg-gradient-to-br from-purple-50 to-indigo-50",
       borderColor: "border-purple-200/50",
     },
     {
       icon: TrendingUp,
-      label: "NFTs Minted",
-      value: (counters.nfts / 1000000).toFixed(1) + "M+",
-      change: "+25.7%",
+      label: "Growth Potential",
+      value: "High",
+      change: "Expanding",
       color: "from-emerald-500 to-green-500",
       bgColor: "bg-gradient-to-br from-emerald-50 to-green-50",
       borderColor: "border-emerald-200/50",
     },
     {
       icon: DollarSign,
-      label: "Trading Volume",
-      value: "$" + (counters.volume / 1000000).toFixed(0) + "M+",
-      change: "+18.9%",
+      label: "Market Opportunity",
+      value: "Significant",
+      change: "Growing",
       color: "from-orange-500 to-amber-500",
       bgColor: "bg-gradient-to-br from-orange-50 to-amber-50",
       borderColor: "border-orange-200/50",
     },
     {
       icon: Globe,
-      label: "Computing Nodes",
-      value: (counters.nodes / 1000).toFixed(0) + "K+",
-      change: "+15.2%",
+      label: "Network Vision",
+      value: "Global",
+      change: "Planning",
       color: "from-cyan-500 to-teal-500",
       bgColor: "bg-gradient-to-br from-cyan-50 to-teal-50",
       borderColor: "border-cyan-200/50",
     },
     {
       icon: Activity,
-      label: "On-chain Transactions",
-      value: (counters.transactions / 1000000).toFixed(1) + "M+",
-      change: "+22.1%",
+      label: "Technology Stack",
+      value: "Modern",
+      change: "Optimizing",
       color: "from-indigo-500 to-purple-500",
       bgColor: "bg-gradient-to-br from-indigo-50 to-purple-50",
       borderColor: "border-indigo-200/50",
@@ -133,10 +133,10 @@ export function InteractiveStats() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-3 sm:mb-4">
-            Real-time Ecosystem Data
+            Platform Vision & Capabilities
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-            Transparent on-chain data showcasing the real activity and growth potential of the AIMINT ecosystem
+            Building the future of AI-generated content and blockchain technology integration
           </p>
         </div>
 
@@ -178,12 +178,12 @@ export function InteractiveStats() {
           ))}
         </div>
 
-        {/* Live Indicator */}
+        {/* Development Status */}
         <div className="flex items-center justify-center gap-2 mt-6 sm:mt-8">
-          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-lg" />
-          <span className="text-sm text-slate-600">Real-time data updates</span>
+          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse shadow-lg" />
+          <span className="text-sm text-slate-600">Development in progress</span>
           <div className="w-1 h-1 bg-slate-400 rounded-full mx-2" />
-          <span className="text-xs text-slate-500">Last updated: just now</span>
+          <span className="text-xs text-slate-500">Building the future</span>
         </div>
       </div>
     </section>

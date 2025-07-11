@@ -95,9 +95,9 @@ export function Hero() {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               {[
-                { icon: Users, label: "Global Users", value: "500K+" },
-                { icon: Zap, label: "AI Models", value: "1,000+" },
-                { icon: TrendingUp, label: "NFT Minted", value: "2M+" },
+                { icon: Users, label: "Community Focus", value: "Growing" },
+                { icon: Zap, label: "AI Innovation", value: "Advanced" },
+                { icon: TrendingUp, label: "Future Vision", value: "Bright" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2">

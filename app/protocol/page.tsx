@@ -29,22 +29,22 @@ export default function ProtocolPage() {
 
   const benefits = [
     {
-      title: "Model Count",
-      description: "Total AI models hosted on the platform",
-      value: "1,000+",
-      suffix: "AI Models",
+      title: "Model Ecosystem",
+      description: "Building a comprehensive AI model marketplace",
+      value: "Growing",
+      suffix: "Ecosystem",
     },
     {
-      title: "Developers",
-      description: "Active global developer community",
-      value: "5,000+",
-      suffix: "Developers",
+      title: "Developer Community",
+      description: "Fostering a vibrant global developer community",
+      value: "Welcoming",
+      suffix: "Community",
     },
     {
-      title: "Revenue Share",
-      description: "Total revenue distributed to developers",
-      value: "$2M+",
-      suffix: "Total Revenue",
+      title: "Revenue Vision",
+      description: "Sustainable revenue sharing for model creators",
+      value: "Fair",
+      suffix: "Distribution",
     },
   ]
 

@@ -6,13 +6,13 @@ import Image from "next/image"
 export default function ComputingPage() {
   const features = [
     {
-      title: "Global Nodes",
-      description: "10,000+ nodes worldwide providing powerful computing capabilities",
+      title: "Global Vision",
+      description: "Building a worldwide network of distributed computing resources",
       icon: Globe,
     },
     {
-      title: "Cost Reduction",
-      description: "Over 60% cost reduction compared to traditional cloud services",
+      title: "Cost Efficiency",
+      description: "Optimizing computing costs through innovative distributed architecture",
       icon: TrendingDown,
     },
     {
@@ -29,22 +29,22 @@ export default function ComputingPage() {
 
   const benefits = [
     {
-      title: "High Performance",
-      description: "GPU clusters accelerate AI model training and inference",
-      value: "10x",
+      title: "Performance Focus",
+      description: "GPU clusters designed for AI model training and inference",
+      value: "Optimized",
       suffix: "Performance",
     },
     {
-      title: "Cost Optimization",
-      description: "Distributed computing network significantly reduces costs",
-      value: "60%",
-      suffix: "Cost Savings",
+      title: "Cost Innovation",
+      description: "Distributed computing network designed for efficiency",
+      value: "Efficient",
+      suffix: "Architecture",
     },
     {
-      title: "Global Coverage",
-      description: "Computing node network spanning the globe",
-      value: "10K+",
-      suffix: "Compute Nodes",
+      title: "Network Growth",
+      description: "Expanding computing node network infrastructure",
+      value: "Scalable",
+      suffix: "Network",
     },
   ]
 

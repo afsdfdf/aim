@@ -59,7 +59,7 @@ export default function Community() {
             <div className="hidden md:block">
               <h4 className="font-bold text-gray-900 mb-4">Resources</h4>
               <ul className="space-y-3">
-                {["Whitepaper", "Developer Docs", "API Reference", "Help Center"].map((item, index) => (
+                {["Whitepaper", "Developer Docs", "Help Center"].map((item, index) => (
                   <li key={index}>
                     <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm">
                       {item}
@@ -79,13 +79,13 @@ export default function Community() {
                       href="#"
                       className="block text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xs"
                     >
-                      AI Minting
+                      Computing Market
                     </a>
                     <a
                       href="#"
                       className="block text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xs"
                     >
-                      Computing Market
+                      Model Protocol
                     </a>
                   </div>
                 </div>
