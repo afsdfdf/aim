@@ -165,12 +165,12 @@ export default function ComputingPage() {
                 {/* Network Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="p-4 bg-blue-50 rounded-xl border border-blue-200">
-                    <div className="text-sm text-blue-600 mb-1">Active Nodes</div>
-                    <div className="text-2xl font-bold text-blue-700">10,247</div>
+                    <div className="text-sm text-blue-600 mb-1">Network Status</div>
+                    <div className="text-2xl font-bold text-blue-700">Building</div>
                   </div>
                   <div className="p-4 bg-green-50 rounded-xl border border-green-200">
-                    <div className="text-sm text-green-600 mb-1">Total Power</div>
-                    <div className="text-2xl font-bold text-green-700">2.4 PH/s</div>
+                    <div className="text-sm text-green-600 mb-1">Platform Vision</div>
+                    <div className="text-2xl font-bold text-green-700">Global</div>
                   </div>
                 </div>
 

@@ -435,31 +435,10 @@ export function EnhancedDemo() {
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-blue-600" />
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">Active Users</div>
-                    <div className="text-lg font-bold text-blue-600">12,345</div>
+                    <div className="text-sm font-semibold text-gray-900">Platform Status</div>
+                    <div className="text-lg font-bold text-blue-600">Building</div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl">
-              <h3 className="text-2xl font-bold mb-4">Ready to Create Your First AI Asset?</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                Join thousands of creators who are already transforming their ideas into valuable digital assets
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 hover:scale-105">
-                  Start Creating Now
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  Watch Full Tutorial
-                </Button>
               </div>
             </div>
           </div>

@@ -12,7 +12,6 @@ export default function RoadmapPage() {
       color: "green",
       achievements: [
         "✅ Core team formation completed",
-        "✅ Seed funding $5M",
         "✅ Technical architecture design",
         "✅ Smart contract development",
       ],
@@ -66,13 +65,6 @@ export default function RoadmapPage() {
   ]
 
   const milestones = [
-    {
-      date: "March 2025",
-      title: "Series A Funding Completed",
-      description: "$15M funding led by top-tier institutions",
-      status: "upcoming",
-      icon: Target,
-    },
     {
       date: "June 2025",
       title: "Official Mainnet Launch",

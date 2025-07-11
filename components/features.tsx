@@ -159,33 +159,6 @@ export function Features() {
             </Card>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-slate-200/50 max-w-2xl mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">
-              Ready to start your AI creation journey?
-            </h3>
-            <p className="text-slate-600 mb-4 sm:mb-6">
-              Join 500K+ global creators and transform your creativity into valuable digital assets
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Start Creating for Free
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                Schedule Demo
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

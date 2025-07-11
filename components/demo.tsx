@@ -224,8 +224,8 @@ export function Demo() {
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-blue-600" />
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">Online Users</div>
-                    <div className="text-lg font-bold text-blue-600">12,345</div>
+                    <div className="text-sm font-semibold text-gray-900">Platform Status</div>
+                    <div className="text-lg font-bold text-blue-600">Building</div>
                   </div>
                 </div>
               </div>

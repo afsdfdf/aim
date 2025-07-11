@@ -72,26 +72,6 @@ export function Hero() {
               economy ecosystem. Make every creative idea a valuable digital asset.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Start Creating Now
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 px-8 py-4 text-lg rounded-xl transition-all duration-300"
-              >
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
-              </Button>
-            </div>
-
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               {[
@@ -185,54 +165,6 @@ export function Hero() {
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                   Mint as NFT
                 </Button>
-              </div>
-            </div>
-
-            {/* Floating Cards */}
-            <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-gray-100 animate-float">
-              {/* Transparent Logo */}
-              <div className="absolute top-2 right-2">
-                <Image
-                  src="/logo1.png"
-                  alt="AIMINT Transparent Logo"
-                  width={24}
-                  height={24}
-                  className="w-4 h-4 opacity-20"
-                />
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <TrendingUp className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-gray-900">Real-time Revenue</div>
-                  <div className="text-xs text-green-600">+$1,234</div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-gray-100 animate-float"
-              style={{ animationDelay: "1s" }}
-            >
-              {/* Transparent Logo */}
-              <div className="absolute top-2 right-2">
-                <Image
-                  src="/logo1.png"
-                  alt="AIMINT Transparent Logo"
-                  width={24}
-                  height={24}
-                  className="w-4 h-4 opacity-20"
-                />
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <Users className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-gray-900">Active Creators</div>
-                  <div className="text-xs text-blue-600">12,345</div>
-                </div>
               </div>
             </div>
           </div>

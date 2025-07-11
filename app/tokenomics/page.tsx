@@ -368,31 +368,6 @@ export default function TokenomicsPage() {
             ))}
           </div>
         </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">Ready to join the AIMINT ecosystem?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get AIMINT tokens now, participate in ecosystem building, and enjoy development dividends
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Buy AIMINT Tokens
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   )

@@ -70,7 +70,6 @@ export function Navigation() {
       dropdown: [
         { name: "Whitepaper", href: "/whitepaper" },
         { name: "Developer Docs", href: "/developer-docs" },
-        { name: "Help Center", href: "/help-center" },
       ],
     },
   ]
@@ -150,9 +149,6 @@ export function Navigation() {
             >
               Sign In
             </Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-2 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
-              Start Creating
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -199,9 +195,6 @@ export function Navigation() {
                   className="border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 py-3 rounded-xl"
                 >
                   Sign In
-                </Button>
-                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-xl">
-                  Start Creating
                 </Button>
               </div>
             </div>
