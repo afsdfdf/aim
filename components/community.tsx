@@ -25,7 +25,7 @@ export default function Community() {
               </p>
               <div className="flex gap-3 justify-center md:justify-start">
                 {[
-                  { icon: Twitter, href: "https://twitter.com/AIMINTOfficial" },
+                  { icon: Twitter, href: "https://x.com/aimint_token" },
                   { icon: Github, href: "https://github.com/AIMINT" },
                   { icon: Send, href: "https://t.me/AIMINTCommunity" },
                   { icon: MessageCircle, href: "#" },
@@ -45,7 +45,7 @@ export default function Community() {
             <div className="hidden md:block">
               <h4 className="font-bold text-gray-900 mb-4">Products</h4>
               <ul className="space-y-3">
-                {["AI Minting", "Computing Market", "Model Protocol", "DAO Governance"].map((item, index) => (
+                {["AI Minting", "Computing Market", "DAO Governance"].map((item, index) => (
                   <li key={index}>
                     <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm">
                       {item}
@@ -85,7 +85,7 @@ export default function Community() {
                       href="#"
                       className="block text-gray-600 hover:text-blue-600 transition-colors duration-300 text-xs"
                     >
-                      Model Protocol
+                      DAO Governance
                     </a>
                   </div>
                 </div>

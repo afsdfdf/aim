@@ -94,7 +94,7 @@ export default function WhitepaperPage() {
             <span className="text-3xl sm:text-4xl text-gray-700">Algorithm as Asset, Crafting Future Creation</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A decentralized creative ecosystem based on the deep integration of artificial intelligence and blockchain technology with a total token supply of 100 billion AIMINT
+            A decentralized creative ecosystem based on the deep integration of artificial intelligence and blockchain technology with a total token supply of 1 billion AIMINT
           </p>
           <div className="flex items-center justify-center gap-8 mt-8 text-sm text-gray-500">
             <span>Release Date: January 2025</span>
@@ -514,7 +514,7 @@ export default function WhitepaperPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">50%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">50.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">500M</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">33%</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">0 months</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
@@ -528,7 +528,7 @@ export default function WhitepaperPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">15%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">15.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">150M</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
@@ -542,7 +542,7 @@ export default function WhitepaperPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">15%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">15.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">150M</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">24 months</td>
@@ -556,7 +556,7 @@ export default function WhitepaperPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">10%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">10.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">100M</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">20%</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">0 months</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">18 months</td>
@@ -570,7 +570,7 @@ export default function WhitepaperPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900 font-semibold">10%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">10.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-gray-900">100M</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-blue-600 font-medium">10%</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-purple-600 font-medium">12 months</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center text-sm text-green-600 font-medium">36 months</td>
@@ -579,7 +579,7 @@ export default function WhitepaperPage() {
                     <tr className="bg-gray-50">
                       <td className="px-4 py-3 whitespace-nowrap font-bold text-gray-900">Total</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-gray-900">100%</td>
-                      <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-gray-900">100.0B</td>
+                      <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-gray-900">1.0B</td>
                       <td className="px-4 py-3 whitespace-nowrap text-center"></td>
                       <td className="px-4 py-3 whitespace-nowrap text-center"></td>
                       <td className="px-4 py-3 whitespace-nowrap text-center"></td>
@@ -590,10 +590,10 @@ export default function WhitepaperPage() {
               </div>
               <div className="mt-4 text-sm text-gray-700">
                 <p className="mb-2">
-                  <strong>Total Token Supply: 100,000,000,000 (100B) AIMINT Tokens</strong>
+                  <strong>Total Token Supply: 1,000,000,000 (1B) AIMINT Tokens</strong>
                 </p>
                 <p className="mb-2">
-                  <strong>Initial Circulating Supply: 25,500,000,000 (25.5B) AIMINT Tokens</strong> - 25.5% of total supply unlocked at Token Generation Event (TGE)
+                  <strong>Initial Circulating Supply: 255,000,000 (255M) AIMINT Tokens</strong> - 25.5% of total supply unlocked at Token Generation Event (TGE)
                 </p>
                 <p>
                   The token release schedule is designed to ensure long-term project sustainability and ecosystem growth while providing sufficient liquidity for market operations.

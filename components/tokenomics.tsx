@@ -10,7 +10,7 @@ export function Tokenomics() {
     {
       name: "Asset Onboarding and Liquidity Incentives",
       value: 50,
-      amount: 50000000000,
+      amount: 500000000,
       color: "#06b6d4",
       tge: "33%",
       cliff: "0 months",
@@ -20,7 +20,7 @@ export function Tokenomics() {
     {
       name: "Technical Development and Platform Operations",
       value: 15,
-      amount: 15000000000,
+      amount: 150000000,
       color: "#3b82f6",
       tge: "20%",
       cliff: "12 months",
@@ -30,7 +30,7 @@ export function Tokenomics() {
     {
       name: "Compliance and Governance Fund",
       value: 15,
-      amount: 15000000000,
+      amount: 150000000,
       color: "#8b5cf6",
       tge: "20%",
       cliff: "12 months",
@@ -40,7 +40,7 @@ export function Tokenomics() {
     {
       name: "Foundation Reserve",
       value: 10,
-      amount: 10000000000,
+      amount: 100000000,
       color: "#f59e0b",
       tge: "20%",
       cliff: "0 months",
@@ -50,7 +50,7 @@ export function Tokenomics() {
     {
       name: "Team and Advisors",
       value: 10,
-      amount: 10000000000,
+      amount: 100000000,
       color: "#10b981",
       tge: "10%",
       cliff: "12 months",
@@ -252,7 +252,7 @@ export function Tokenomics() {
                   <tr className="bg-slate-700/50">
                     <td className="px-4 py-3 whitespace-nowrap font-bold text-white text-xs sm:text-sm">Total</td>
                     <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-white text-xs sm:text-sm">100%</td>
-                    <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-white text-xs sm:text-sm">100.0B</td>
+                    <td className="px-4 py-3 whitespace-nowrap text-center font-bold text-white text-xs sm:text-sm">1.0B</td>
                     <td className="px-4 py-3 whitespace-nowrap text-center"></td>
                     <td className="px-4 py-3 whitespace-nowrap text-center"></td>
                     <td className="px-4 py-3 whitespace-nowrap text-center"></td>
