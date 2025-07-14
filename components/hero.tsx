@@ -153,12 +153,8 @@ export function Hero() {
                     src="/images/cat.png"
                     alt="AI Generated Cat in Space - Cyberpunk Style"
                     fill
-                    className="object-cover rounded-xl"
+                    className="object-contain rounded-xl"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                    <div className="text-sm font-medium">AI Generated Artwork</div>
-                    <div className="text-xs opacity-75">Ready to mint as NFT</div>
-                  </div>
                 </div>
 
                 {/* Mint Button */}

@@ -14,12 +14,15 @@ export function EnhancedDemo() {
   const [generatedContent, setGeneratedContent] = useState<string | null>(null)
   const [currentStep, setCurrentStep] = useState(0)
   const [showResult, setShowResult] = useState(false)
+  const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null)
+  const [apiError, setApiError] = useState<string | null>(null)
+  const [customPrompt, setCustomPrompt] = useState("A colorful cartoon cat with rainbow stripes, cute and playful style")
 
   const demos = [
     {
       title: "AI Art Creation",
       description: "From text description to exquisite artwork",
-      prompt: "A cat floating in space, cyberpunk style, neon effects",
+      get prompt() { return customPrompt },
       steps: [
         { title: "Input Creativity", desc: "Describe the artwork you want", time: "1s" },
         { title: "AI Generation", desc: "Multi-model collaborative creation", time: "2s" },
@@ -104,42 +107,80 @@ export function EnhancedDemo() {
     setGeneratedContent(null)
     setCurrentStep(0)
     setShowResult(false)
+    setGeneratedImageUrl(null)
+    setApiError(null)
 
-    // Simulate AI generation process with stages
-    for (let stage = 0; stage < currentDemo.generationStages.length; stage++) {
-      setCurrentStep(stage)
+    try {
+      // 只有AI艺术创作使用真实API，其他保持模拟
+      if (activeTab === 0) {
+        // 真实AI图片生成
+        for (let stage = 0; stage < currentDemo.generationStages.length; stage++) {
+          setCurrentStep(stage)
+          const stageProgress = ((stage + 1) / currentDemo.generationStages.length) * 100
+          
+          if (stage === currentDemo.generationStages.length - 2) {
+            // 在最后阶段调用真实API
+            const response = await fetch('/api/generate-image', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                prompt: customPrompt,
+                model: "Kwai-Kolors/Kolors",
+                image_size: "1024x1024",
+                batch_size: 1,
+                num_inference_steps: 20,
+                guidance_scale: 7.5
+              })
+            })
 
-      // Update progress for each stage
-      const stageProgress = ((stage + 1) / currentDemo.generationStages.length) * 100
+            if (!response.ok) {
+              throw new Error(`API请求失败: ${response.status}`);
+            }
 
-      // Animate progress within each stage
-      for (let i = Math.floor(progress); i <= stageProgress; i += 2) {
-        setProgress(i)
-        await new Promise((resolve) => setTimeout(resolve, 50))
+            const result = await response.json();
+            if (result.success && result.data.images && result.data.images.length > 0) {
+              setGeneratedImageUrl(result.data.images[0].url);
+            } else {
+              throw new Error('API返回数据格式错误');
+            }
+          }
+          
+          // 动画进度条
+          for (let i = Math.floor(progress); i <= stageProgress; i += 2) {
+            setProgress(i)
+            await new Promise((resolve) => setTimeout(resolve, 50))
+          }
+          
+          await new Promise((resolve) => setTimeout(resolve, 300))
+        }
+      } else {
+        // 其他演示保持模拟
+        for (let stage = 0; stage < currentDemo.generationStages.length; stage++) {
+          setCurrentStep(stage)
+          const stageProgress = ((stage + 1) / currentDemo.generationStages.length) * 100
+          
+          for (let i = Math.floor(progress); i <= stageProgress; i += 2) {
+            setProgress(i)
+            await new Promise((resolve) => setTimeout(resolve, 50))
+          }
+          
+          await new Promise((resolve) => setTimeout(resolve, 300))
+        }
       }
 
-      // Pause between stages
-      await new Promise((resolve) => setTimeout(resolve, 300))
+      setGeneratedContent("Generated successfully!")
+      setShowResult(true)
+    } catch (error) {
+      console.error('生成失败:', error)
+      setApiError(error instanceof Error ? error.message : '生成失败，请重试')
+    } finally {
+      setIsGenerating(false)
     }
-
-    setGeneratedContent("Generated successfully!")
-    setShowResult(true)
-    setIsGenerating(false)
   }
 
-  // Auto-reset demo after showing result
-  useEffect(() => {
-    if (showResult) {
-      const timer = setTimeout(() => {
-        setShowResult(false)
-        setGeneratedContent(null)
-        setProgress(0)
-        setCurrentStep(0)
-      }, 10000) // Reset after 10 seconds
-
-      return () => clearTimeout(timer)
-    }
-  }, [showResult])
+  // Removed auto-reset functionality to prevent automatic page navigation
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
@@ -269,9 +310,19 @@ export function EnhancedDemo() {
                   {/* Input Area */}
                   <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
                     <div className="text-sm text-gray-600 mb-2">Creative Prompt</div>
-                    <div className="bg-white p-3 rounded-lg border border-gray-200 text-gray-800 shadow-sm">
-                      {currentDemo.prompt}
-                    </div>
+                    {activeTab === 0 ? (
+                      <textarea
+                        value={customPrompt}
+                        onChange={(e) => setCustomPrompt(e.target.value)}
+                        className="w-full bg-white p-3 rounded-lg border border-gray-200 text-gray-800 shadow-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        rows={2}
+                        placeholder="Describe the artwork you want to create..."
+                      />
+                    ) : (
+                      <div className="bg-white p-3 rounded-lg border border-gray-200 text-gray-800 shadow-sm">
+                        {currentDemo.prompt}
+                      </div>
+                    )}
                   </div>
 
                   {/* Generation Status */}
@@ -296,22 +347,34 @@ export function EnhancedDemo() {
                   )}
 
                   {/* Output Preview */}
-                  <div className="h-64 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center relative overflow-hidden">
-                    {showResult ? (
+                  <div className="h-80 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center relative overflow-hidden">
+                    {apiError ? (
+                      <div className="text-center animate-fadeInUp p-4">
+                        <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                          <span className="text-2xl">❌</span>
+                        </div>
+                        <div className="text-red-600 font-medium mb-2">Generation Failed</div>
+                        <div className="text-sm text-red-500">{apiError}</div>
+                        <Button 
+                          onClick={handleGenerate} 
+                          size="sm" 
+                          className="mt-3 bg-red-600 hover:bg-red-700"
+                        >
+                          Retry
+                        </Button>
+                      </div>
+                    ) : showResult ? (
                       <div className="relative w-full h-full animate-fadeInUp">
                         <Image
-                          src={currentDemo.resultImage}
+                          src={activeTab === 0 && generatedImageUrl ? generatedImageUrl : currentDemo.resultImage}
                           alt={`Generated ${currentDemo.title} result`}
                           fill
-                          className="object-cover rounded-xl"
+                          className="object-contain rounded-xl"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = currentDemo.resultImage;
+                          }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl" />
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                            <div className="text-sm font-semibold text-gray-900">{currentDemo.title} Result</div>
-                            <div className="text-xs text-gray-600">AI Generated • Ready to mint as NFT</div>
-                          </div>
-                        </div>
                       </div>
                     ) : generatedContent ? (
                       <div className="text-center animate-fadeInUp">
@@ -327,7 +390,7 @@ export function EnhancedDemo() {
                           src={currentDemo.placeholderImage}
                           alt={`${currentDemo.title} preview`}
                           fill
-                          className="object-cover rounded-xl opacity-50"
+                          className="object-contain rounded-xl opacity-50"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-xl" />
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -345,7 +408,7 @@ export function EnhancedDemo() {
                           src={currentDemo.placeholderImage}
                           alt={`${currentDemo.title} placeholder`}
                           fill
-                          className="object-cover rounded-xl opacity-70"
+                          className="object-contain rounded-xl opacity-70"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-xl" />
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -391,6 +454,23 @@ export function EnhancedDemo() {
                           <Share2 className="mr-2 w-4 h-4" />
                           Mint NFT
                         </Button>
+                      </div>
+                    )}
+
+                    {/* Advanced AI Generator Link - Only show for AI Art Creation */}
+                    {activeTab === 0 && (
+                      <div className="mt-3 pt-3 border-t border-gray-200">
+                        <Button
+                          onClick={() => window.open('/ai-generator', '_blank')}
+                          variant="outline"
+                          className="w-full rounded-xl border-2 border-blue-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-300"
+                        >
+                          <Wand2 className="mr-2 w-4 h-4 text-blue-600" />
+                          <span className="text-blue-700 font-medium">Open Advanced AI Generator</span>
+                        </Button>
+                        <p className="text-xs text-gray-500 text-center mt-2">
+                          Access full AI creation studio with advanced settings
+                        </p>
                       </div>
                     )}
                   </div>

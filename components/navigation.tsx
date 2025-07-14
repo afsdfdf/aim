@@ -57,6 +57,7 @@ export function Navigation() {
       href: "#features",
       dropdown: [
         { name: "Computing Market", href: "/computing" },
+        { name: "AI Generator", href: "/ai-generator" },
         { name: "Model Protocol", href: "/protocol" },
         { name: "DAO Governance", href: "/dao" },
       ],
