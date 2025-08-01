@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'AIMINT - Algorithm as Asset, Forging Future Creation',
     description: 'Transform AI-generated content into valuable digital assets through blockchain technology',
     images: ['https://aimint.io/twitter-image.jpg'],
-    creator: '@AIMINTOfficial',
+    creator: '@aimint_token',
   },
   robots: {
     index: true,
